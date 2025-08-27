@@ -7,5 +7,5 @@ Animación de fondo interactiva que vincula la reproducción de un video, gif o 
 
 ## Notas
 * Muchas herramientas de edición de video permiten exportar la animación como un paquete de frames.
-* Es necesario ajustar el formato, la extensión y el nombre de los archivos en images.js. En este caso se utilizaron .webp para reducir el peso en KB.
+* Es necesario ajustar el formato, la extensión y el nombre de los archivos en "images.js". En este caso se utilizaron .webp para reducir el peso en KB.
 * La calidad y fluidez de la animación pueden mejorarse aumentando la cantidad de frames (FPS) o duplicando los existentes.
