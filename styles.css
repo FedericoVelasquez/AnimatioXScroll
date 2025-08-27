@@ -1,0 +1,108 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+    position: relative;
+    min-height: 100vh;
+}
+
+img {
+    width: 100vw;
+    height: 100dvh;
+    object-fit: cover;
+    position: fixed;
+}
+
+main {
+    height: 300dvh;
+    position: relative;
+}
+
+/* Imagen del scroll */
+.scroll-image {
+    width: 100vw;
+    height: 100dvh;
+    object-fit: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+header{
+    background: linear-gradient(40deg, #8fbcd3, #02102a 50%);
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    position: fixed;
+    top: -210px;
+    left: 50%;
+    transform: translateX(-25%);
+    z-index: 10;
+    /*margin-top: -150px;*/
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    animation: slideInDown 1500ms ease-out;
+    transition: opacity 0.3s ease; /* Fallback */
+
+    img {
+    width: 130px;
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 17px;
+    }    
+}
+
+footer {
+    background: linear-gradient(50deg, #0684d8, #bbc2ca 70%);
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: -210px;
+    left: 40%;
+    transform: translateX(-75%); /* Empieza más abajo */
+    z-index: 10;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease; /* Fallback */
+
+    img {
+        width: 130px;
+        height: auto;
+        margin: 0 auto;
+        margin-top: 17px;
+    }
+}
+
+footer.animate-in {
+    animation: slideInUp 1500ms ease-out forwards;
+}
+
+@keyframes slideInDown {
+    from {
+        transform: translate3d(-25%, -100%, 0);
+        opacity: 0;
+    }
+    to {
+        transform: translate3d(-25%, 0, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateX(-75%) translateY(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(-75%) translateY(0);
+        opacity: 1;
+    }
+}
